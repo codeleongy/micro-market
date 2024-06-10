@@ -3,7 +3,7 @@ package handler
 import (
 	"context"
 
-	"github.com/codeleongy/micro-market/product/common"
+	"github.com/codeleongy/micro-market/common"
 	"github.com/codeleongy/micro-market/product/domain/model"
 	"github.com/codeleongy/micro-market/product/domain/service"
 	pb "github.com/codeleongy/micro-market/product/proto/product"

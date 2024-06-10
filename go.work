@@ -5,4 +5,5 @@ use(
     ./category
     ./product
     ./cart
+    ./common
 ) 
