@@ -1,0 +1,4 @@
+*.sql
+user/bin
+category/bin
+.vscode

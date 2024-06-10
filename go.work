@@ -1,0 +1,9 @@
+go 1.22.2
+
+use(
+    ./user
+    ./category
+    ./product
+    ./cart
+    ./product-client
+) 
