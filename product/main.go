@@ -20,14 +20,14 @@ import (
 )
 
 var (
-	serviceName = "product"
+	serviceName = "go.micro.product.service"
 	version     = "latest"
 )
 
 func main() {
 
 	// 配置中心
-	consulConfig, err := common.GetConsulConfig("127.0.0.1", 8500, "/micro/config")
+	consulConfig, err := common.GetConsulConfig("127.0.0.1", 18500, "/micro/config")
 	if err != nil {
 		logger.Error(err)
 	}
@@ -35,12 +35,12 @@ func main() {
 	// 注册中心
 	consulRegistry := consul.NewRegistry(func(o *registry.Options) {
 		o.Addrs = []string{
-			"127.0.0.1:8500",
+			"127.0.0.1:18500",
 		}
 	})
 
 	// 链路追踪
-	t, io, err := common.NewTracer("product", "localhost:6831")
+	t, io, err := common.NewTracer("go.micro.product.service", "localhost:6831")
 	if err != nil {
 		logger.Error(err)
 	}
@@ -68,7 +68,7 @@ func main() {
 
 	db.SingularTable(true)
 
-	repository.NewProductRepository(db).InitTable()
+	// repository.NewProductRepository(db).InitTable()
 
 	productDataService := service.NewProductDataService(repository.NewProductRepository(db))
 
@@ -78,7 +78,7 @@ func main() {
 	srv.Init(
 		micro.Name(serviceName),
 		micro.Version(version),
-		micro.Address("127.0.0.1:8082"),
+		micro.Address("127.0.0.1:8083"),
 		micro.Registry(consulRegistry),
 		// 链路追踪绑定
 		micro.WrapHandler(opentracingFn.NewHandlerWrapper(opentracing.GlobalTracer())),

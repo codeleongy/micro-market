@@ -17,14 +17,14 @@ import (
 )
 
 var (
-	serviceName = "category"
+	serviceName = "go.micro.service.category"
 	version     = "latest"
 )
 
 func main() {
 
 	// 配置中心
-	consulConfig, err := common.GetConsulConfig("127.0.0.1", 8500, "/micro/config")
+	consulConfig, err := common.GetConsulConfig("127.0.0.1", 18500, "/micro/config")
 	if err != nil {
 		logger.Error(err)
 	}
@@ -32,7 +32,7 @@ func main() {
 	// 注册中心
 	consulRegistry := consul.NewRegistry(func(o *registry.Options) {
 		o.Addrs = []string{
-			"127.0.0.1:8500",
+			"127.0.0.1:18500",
 		}
 	})
 
@@ -65,8 +65,8 @@ func main() {
 	db.SingularTable(true)
 
 	// 初始化表
-	rp := repository.NewCategoryRepository(db)
-	rp.InitTable()
+	// rp := repository.NewCategoryRepository(db)
+	// rp.InitTable()
 
 	// 初始化服务
 	srv.Init()

@@ -21,10 +21,11 @@ func main() {
 	srv.Init(
 		micro.Name("go.micro.service.user"),
 		micro.Version("latest"),
+		micro.Address("localhost:8081"),
 	)
 
 	// 创建数据库连接
-	db, err := gorm.Open("mysql", "root:root123@(127.0.0.1:13306)/micro?charset=utf8mb4&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", "root:root123@(127.0.0.1:13306)/market?charset=utf8mb4&parseTime=True&loc=Local")
 
 	if err != nil {
 		fmt.Println(err)

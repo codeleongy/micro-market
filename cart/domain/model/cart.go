@@ -3,18 +3,12 @@ package model
 type Cart struct {
 	// 主键
 	ID int64 `gorm:"primary_key;not_null;auto_increment" json:"id"`
-	// 购物车ID
+	// 商品ID
 	ProductID int64 `gorm:"not_null" json:"product_id"`
 	// 商品唯一标识
-	ProductSku string `gorm:"unique_index;not_null" json:"product_sku"`
-	// 商品价格
-	ProductPrice float64 `json:"product_price"`
-	// 商品描述
-	ProductDesc string `json:"product_desc"`
-	// 商品图片
-	ProductImage []ProductImage `gorm:"ForeignKey:ImageProductID" json:"product_image"`
-	// 商品尺码
-	ProductSize []ProductSize `gorm:"ForeignKey:SizeProductID" json:"product_size"`
-	// SEO
-	ProductSeo ProductSeo `gorm:"ForeignKey:SeoProductID" json:"product_seo"`
+	Num int64 `gorm:"not_null" json:"num"`
+	// 尺码ID
+	SizeID int64 `gorm:"not_null" json:"size_id"`
+	// 用户ID
+	UserID int64 `gorm:"not_null" json:"user_id"`
 }

@@ -5,5 +5,4 @@ use(
     ./category
     ./product
     ./cart
-    ./product-client
 ) 
