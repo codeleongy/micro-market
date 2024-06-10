@@ -1,6 +1,6 @@
 module github.com/codeleongy/micro-market/common
 
-go 1.22.4
+go 1.18
 
 require (
 	github.com/go-micro/plugins/v4/config/source/consul v1.2.0

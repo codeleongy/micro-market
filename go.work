@@ -1,9 +1,10 @@
 go 1.22.2
 
 use(
-    ./user
-    ./category
-    ./product
-    ./cart
+    ./service/user
+    ./service/category
+    ./service/product
+    ./service/cart
+    ./api/cartApi
     ./common
 ) 
