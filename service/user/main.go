@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/codeleongy/micro-market/user/domain/repository"
-	"github.com/codeleongy/micro-market/user/domain/service"
-	"github.com/codeleongy/micro-market/user/handler"
-	pb "github.com/codeleongy/micro-market/user/proto/user"
+	"user/domain/repository"
+	"user/domain/service"
+	"user/handler"
+	pb "user/proto"
+
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"go-micro.dev/v4"

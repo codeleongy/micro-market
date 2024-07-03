@@ -7,7 +7,8 @@ import (
 	"cart/domain/service"
 	pb "cart/proto"
 
-	"github.com/codeleongy/micro-market/common"
+	"micro-market/common"
+
 	"go-micro.dev/v4/logger"
 )
 

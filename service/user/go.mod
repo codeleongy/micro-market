@@ -1,9 +1,9 @@
-module github.com/codeleongy/micro-market/service/user
+module micro-market/service/user
 
 go 1.18
 
 require (
-	github.com/codeleongy/micro-market/user v0.0.0-20240610072703-7d1adb1834de
+	user v0.0.0-20240610072703-7d1adb1834de
 	github.com/jinzhu/gorm v1.9.16
 	go-micro.dev/v4 v4.7.0
 	golang.org/x/crypto v0.0.0-20210513164829-c07d793c2f9a
@@ -46,3 +46,5 @@ require (
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 )
+
+replace user => ./

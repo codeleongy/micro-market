@@ -1,0 +1,9 @@
+# 声明版本
+version: "3"
+services:
+  # 服务名称，并且这个服务名称能够在同一个网络进行访问
+  consul:
+    image: consul:1.15
+    ports:
+      - 18500:8500
+  

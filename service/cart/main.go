@@ -3,12 +3,12 @@ package main
 import (
 	"cart/domain/repository"
 	"cart/domain/service"
-	"fmt"
 
 	"cart/handler"
 	pb "cart/proto"
 
-	"github.com/codeleongy/micro-market/common"
+	"micro-market/common"
+
 	"github.com/go-micro/plugins/v4/registry/consul"
 	ratelimit "github.com/go-micro/plugins/v4/wrapper/ratelimiter/uber"
 	opentracingFn "github.com/go-micro/plugins/v4/wrapper/trace/opentracing"
@@ -58,13 +58,7 @@ func main() {
 	// 数据库初始化
 	mysqlInfo := common.GetMysqlFromConsul(consulConfig, "mysql")
 
-	db, err := gorm.Open("mysql", fmt.Sprintf("%s:%s@(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		mysqlInfo.User,
-		mysqlInfo.Pwd,
-		mysqlInfo.Host,
-		mysqlInfo.Port,
-		mysqlInfo.Database,
-	))
+	db, err := gorm.Open("mysql", common.GetMysqlURI(mysqlInfo))
 
 	if err != nil {
 		logger.Error(err)

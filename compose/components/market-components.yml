@@ -1,0 +1,28 @@
+# 声明版本
+version: "3"
+services:
+  # 服务名称，并且这个服务名称能够在同一个网络进行访问
+  mysql:
+    image: mysql
+    ports:
+      - 13306:3306
+    volumes:
+      - /data/mysql:/var/lib/mysql/
+    environment:
+      - MYSQL_ROOT_PASSWORD=root123
+  jaeger:
+    image: jaegertracing/all-in-one
+    ports:
+      - 6831:6831/udp
+      - 16686:16686
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - 9090:9090
+    volumes:
+      - /data/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+  grafana:
+    image: grafana/grafana-enterprise
+    ports:
+      - 3000:3000
+  

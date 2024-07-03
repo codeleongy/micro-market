@@ -3,9 +3,10 @@ package handler
 import (
 	"context"
 
-	"github.com/codeleongy/micro-market/user/domain/model"
-	"github.com/codeleongy/micro-market/user/domain/service"
-	pb "github.com/codeleongy/micro-market/user/proto/user"
+	"user/domain/model"
+	"user/domain/service"
+
+	pb "user/proto"
 )
 
 type User struct {

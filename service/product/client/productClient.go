@@ -4,8 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/codeleongy/micro-market/common"
-	pb "github.com/codeleongy/micro-market/service/product/proto"
+	"micro-market/common"
+	pb "product/proto"
+
 	"github.com/go-micro/plugins/v4/registry/consul"
 	opentracingFn "github.com/go-micro/plugins/v4/wrapper/trace/opentracing"
 	"github.com/opentracing/opentracing-go"

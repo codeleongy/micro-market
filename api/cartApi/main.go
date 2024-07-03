@@ -6,11 +6,12 @@ import (
 	"net"
 	"net/http"
 
+	"cartApi/handler"
+	pb "cartApi/proto"
+	"micro-market/common"
+	cart "micro-market/service/cart/proto"
+
 	"github.com/afex/hystrix-go/hystrix"
-	"github.com/codeleongy/micro-market/api/cartApi/handler"
-	pb "github.com/codeleongy/micro-market/api/cartApi/proto"
-	"github.com/codeleongy/micro-market/common"
-	cart "github.com/codeleongy/micro-market/service/cart/proto"
 	"github.com/go-micro/plugins/v4/registry/consul"
 	"github.com/go-micro/plugins/v4/wrapper/select/roundrobin"
 	opentracingFn "github.com/go-micro/plugins/v4/wrapper/trace/opentracing"

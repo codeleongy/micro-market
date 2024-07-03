@@ -1,4 +1,4 @@
-module github.com/codeleongy/micro-market/service/product
+module micro-market/service/product
 
 go 1.18
 

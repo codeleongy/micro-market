@@ -1,0 +1,7 @@
+{"level":"fatal","ts":"2024-06-11T18:51:06.734+0800","caller":"runtime/proc.go:271","msg":"sql: unknown driver \"mysql\" (forgotten import?)"}
+{"level":"fatal","ts":"2024-06-11T18:51:18.634+0800","caller":"runtime/proc.go:271","msg":"sql: unknown driver \"mysql\" (forgotten import?)"}
+{"level":"fatal","ts":"2024-06-11T18:51:56.943+0800","caller":"runtime/proc.go:271","msg":"sql: unknown driver \"mysql\" (forgotten import?)"}
+{"level":"fatal","ts":"2024-06-11T18:52:34.429+0800","caller":"runtime/proc.go:271","msg":"dial tcp :0: connect: connection refused"}
+{"level":"fatal","ts":"2024-06-11T18:53:46.355+0800","caller":"runtime/proc.go:271","msg":"dial tcp :0: connect: connection refused"}
+{"level":"fatal","ts":"2024-06-11T18:54:58.363+0800","caller":"runtime/proc.go:271","msg":"dial tcp :0: connect: connection refused"}
+{"level":"fatal","ts":"2024-06-11T18:58:00.218+0800","caller":"runtime/proc.go:271","msg":"dial tcp :0: connect: connection refused"}

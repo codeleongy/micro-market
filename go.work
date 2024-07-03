@@ -5,6 +5,9 @@ use(
     ./service/category
     ./service/product
     ./service/cart
+    ./service/order
+    ./service/payment
     ./api/cartApi
     ./common
+    ./web/webApi
 ) 

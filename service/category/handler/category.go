@@ -3,10 +3,12 @@ package handler
 import (
 	"context"
 
-	"github.com/codeleongy/micro-market/common"
-	"github.com/codeleongy/micro-market/service/category/domain/model"
-	"github.com/codeleongy/micro-market/service/category/domain/service"
-	pb "github.com/codeleongy/micro-market/service/category/proto"
+	"category/domain/model"
+	"micro-market/common"
+
+	"category/domain/service"
+	pb "category/proto"
+
 	"go-micro.dev/v4/logger"
 )
 

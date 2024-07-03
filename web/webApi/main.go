@@ -1,33 +1,38 @@
 package main
 
 import (
-
 	"webApi/handler"
-	pb "webApi/proto"
 
-	"go-micro.dev/v4"
+	"github.com/go-micro/plugins/v4/registry/consul"
 	"go-micro.dev/v4/logger"
-
+	"go-micro.dev/v4/registry"
+	"go-micro.dev/v4/web"
 )
 
 var (
-	service = "webapi"
-	version = "latest"
+	serviceName = "go.micro.web.gateway"
+	version     = "latest"
 )
 
 func main() {
+
+	// 注册中心
+	consulRegistry := consul.NewRegistry(func(o *registry.Options) {
+		o.Addrs = []string{
+			"localhost:18500",
+		}
+	})
+
 	// Create service
-	srv := micro.NewService(
-	)
+	srv := web.NewService()
 	srv.Init(
-		micro.Name(service),
-		micro.Version(version),
+		web.Name(serviceName),
+		web.Version(version),
+		web.Address("localhost:8080"),
+		web.Registry(consulRegistry),
+		web.Handler(handler.GetRouter()),
 	)
 
-	// Register handler
-	if err := pb.RegisterWebApiHandler(srv.Server(), new(handler.WebApi)); err != nil {
-		logger.Fatal(err)
-	}
 	// Run service
 	if err := srv.Run(); err != nil {
 		logger.Fatal(err)

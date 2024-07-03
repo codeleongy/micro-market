@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/codeleongy/micro-market/service/category/domain/model"
-	"github.com/codeleongy/micro-market/service/category/domain/repository"
+	"category/domain/model"
+	"category/domain/repository"
 )
 
 type ICategoryDataService interface {

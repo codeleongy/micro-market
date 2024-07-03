@@ -6,9 +6,10 @@ import (
 	"errors"
 	"strconv"
 
-	cart "github.com/codeleongy/micro-market/service/cart/proto"
+	cart "micro-market/service/cart/proto"
 
-	pb "github.com/codeleongy/micro-market/api/cartApi/proto"
+	pb "cartApi/proto"
+
 	"go-micro.dev/v4/logger"
 )
 

@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"product/handler"
 
-	"github.com/codeleongy/micro-market/common"
-	"github.com/codeleongy/micro-market/service/product/domain/repository"
-	"github.com/codeleongy/micro-market/service/product/domain/service"
-	pb "github.com/codeleongy/micro-market/service/product/proto"
+	"micro-market/common"
+	"product/domain/repository"
+	"product/domain/service"
+	pb "product/proto"
+
 	"github.com/go-micro/plugins/v4/registry/consul"
 	opentracingFn "github.com/go-micro/plugins/v4/wrapper/trace/opentracing"
 	"github.com/jinzhu/gorm"

@@ -3,11 +3,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/codeleongy/micro-market/common"
-	"github.com/codeleongy/micro-market/service/category/domain/repository"
-	"github.com/codeleongy/micro-market/service/category/domain/service"
-	"github.com/codeleongy/micro-market/service/category/handler"
-	pb "github.com/codeleongy/micro-market/service/category/proto"
+	"category/domain/repository"
+	"category/domain/service"
+	"category/handler"
+	pb "category/proto"
+	"micro-market/common"
+
 	"github.com/go-micro/plugins/v4/registry/consul"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"

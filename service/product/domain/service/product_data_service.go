@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/codeleongy/micro-market/service/product/domain/model"
-	"github.com/codeleongy/micro-market/service/product/domain/repository"
+	"product/domain/model"
+	"product/domain/repository"
 )
 
 type IProductDataService interface {

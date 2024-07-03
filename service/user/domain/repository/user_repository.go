@@ -1,7 +1,8 @@
 package repository
 
 import (
-	"github.com/codeleongy/micro-market/user/domain/model"
+	"user/domain/model"
+
 	"github.com/jinzhu/gorm"
 )
 

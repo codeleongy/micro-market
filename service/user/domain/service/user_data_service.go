@@ -3,8 +3,9 @@ package service
 import (
 	"errors"
 
-	"github.com/codeleongy/micro-market/user/domain/model"
-	"github.com/codeleongy/micro-market/user/domain/repository"
+	"user/domain/model"
+	"user/domain/repository"
+
 	"golang.org/x/crypto/bcrypt"
 )
 
